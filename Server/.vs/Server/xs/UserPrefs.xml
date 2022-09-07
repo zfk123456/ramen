@@ -1,0 +1,71 @@
+﻿<Properties StartupConfiguration="{E2612B73-FF68-46CB-86D5-13FF52C96AD8}|Default">
+  <MonoDevelop.Ide.ItemProperties.Server PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Server/04DB/DBMgr.cs">
+    <Files>
+      <File FileName="Server/02System/04ChatSys/ChatSys.cs" Line="2" Column="15" />
+      <File FileName="Server/03Cache/CacheSvc.cs" />
+      <File FileName="Server/01Service/01NetSvc/NetSvc.cs" />
+      <File FileName="Server/04DB/DBMgr.cs" Line="2" Column="13" />
+      <File FileName="Server/01Service/02CfgSvc/CfgSvc.cs" />
+      <File FileName="PEProtocol/GameMsg.cs" />
+      <File FileName="Server/02System/03StrongSys/StrongSys.cs" />
+      <File FileName="Server/02System/09FriendSys/FriendSys.cs" />
+      <File FileName="Server/02System/07TaskSys/TaskSys.cs" />
+      <File FileName="PEProtocol/Properties/AssemblyInfo.cs" />
+      <File FileName="PEProtocol/PECommon.cs" />
+      <File FileName="Server/00Common/ServerRoot.cs" />
+      <File FileName="Server/00Common/ServerStart.cs" />
+      <File FileName="Server/01Service/01NetSvc/ServerSession.cs" />
+      <File FileName="Server/01Service/03TimerSvc/PETimer.cs" />
+      <File FileName="Server/01Service/03TimerSvc/TimerSvc.cs" />
+      <File FileName="Server/02System/01LoginSys/LoginSys.cs" />
+      <File FileName="Server/02System/02GuideSys/GuideSys.cs" />
+      <File FileName="Server/02System/05BuySys/BuySys.cs" />
+      <File FileName="Server/02System/06PowerSys/PowerSys.cs" />
+      <File FileName="Server/02System/08FubenSys/FubenSys.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Server" expanded="True">
+            <Node name="PEProtocol" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="Server" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="00Common" expanded="True" />
+              <Node name="01Service" expanded="True">
+                <Node name="01NetSvc" expanded="True" />
+                <Node name="02CfgSvc" expanded="True" />
+                <Node name="03TimerSvc" expanded="True" />
+              </Node>
+              <Node name="02System" expanded="True">
+                <Node name="01LoginSys" expanded="True" />
+                <Node name="02GuideSys" expanded="True" />
+                <Node name="03StrongSys" expanded="True" />
+                <Node name="04ChatSys" expanded="True" />
+                <Node name="05BuySys" expanded="True" />
+                <Node name="06PowerSys" expanded="True" />
+                <Node name="07TaskSys" expanded="True" />
+                <Node name="08FubenSys" expanded="True" />
+                <Node name="09FriendSys" expanded="True" />
+              </Node>
+              <Node name="03Cache" expanded="True" />
+              <Node name="04DB" expanded="True">
+                <Node name="DBMgr.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

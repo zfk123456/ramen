@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 2716019667
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/abupdate.ab
+      Dependencies: {}
+    Info_1:
+      Name: ui/abupdate1.ab
+      Dependencies: {}

@@ -1,0 +1,8 @@
+local UnityEngine=CS.UnityEngine
+local util=require 'util'
+xlua.hotfix(CS.ActivityWnd,'UpdateNews',function(self)
+       local go1=self.resSvc:LoadResourece('abUpdate','abupdate.ab')
+       go1.transform:SetParent(self.scrollTrans1)
+       go1.transform.localPosition=UnityEngine.Vector3.zero
+       go1.transform.localScale=UnityEngine.Vector3.one 
+end)

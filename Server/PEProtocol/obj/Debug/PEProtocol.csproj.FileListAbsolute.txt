@@ -1,0 +1,14 @@
+/Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Client/Assets/Scripts/Net/PEProtocol.dll
+/Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Client/Assets/Scripts/Net/PEProtocol.pdb
+/Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Server/PEProtocol/obj/Debug/PEProtocol.csproj.AssemblyReference.cache
+/Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Server/PEProtocol/obj/Debug/PEProtocol.csproj.CoreCompileInputs.cache
+/Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Server/PEProtocol/obj/Debug/PEProtocol.csproj.CopyComplete
+/Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Server/PEProtocol/obj/Debug/PEProtocol.dll
+/Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Server/PEProtocol/obj/Debug/PEProtocol.pdb
+/Users/apple/Downloads/ResDarkGod/DarkGod/Client/Assets/Scripts/Net/PEProtocol.dll
+/Users/apple/Downloads/ResDarkGod/DarkGod/Client/Assets/Scripts/Net/PEProtocol.pdb
+/Users/apple/Downloads/ResDarkGod/DarkGod/Server/PEProtocol/obj/Debug/PEProtocol.csproj.AssemblyReference.cache
+/Users/apple/Downloads/ResDarkGod/DarkGod/Server/PEProtocol/obj/Debug/PEProtocol.csproj.CoreCompileInputs.cache
+/Users/apple/Downloads/ResDarkGod/DarkGod/Server/PEProtocol/obj/Debug/PEProtocol.csproj.CopyComplete
+/Users/apple/Downloads/ResDarkGod/DarkGod/Server/PEProtocol/obj/Debug/PEProtocol.dll
+/Users/apple/Downloads/ResDarkGod/DarkGod/Server/PEProtocol/obj/Debug/PEProtocol.pdb
