@@ -1,9 +1,15 @@
 ﻿<Properties StartupConfiguration="{12F44184-A422-5F27-22E6-507969043F15}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Service/ResSvc.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIWindow/FriendWnd.cs">
     <Files>
-      <File FileName="Assets/Scripts/HotFixScript.cs" Line="16" Column="33" />
-      <File FileName="Assets/Scripts/Service/ResSvc.cs" Line="123" Column="19" />
-      <File FileName="Assets/Scripts/UIWindow/ActivityWnd.cs" Line="140" Column="41" />
+      <File FileName="Assets/Scripts/UIWindow/ActivityWnd.cs" Line="144" Column="8" />
+      <File FileName="Assets/Scripts/UIWindow/FriendWnd.cs" Line="192" Column="1" />
+      <File FileName="Assets/Scripts/Common/PathDefine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UIWindow/InfoWnd.cs" Line="65" Column="23" />
+      <File FileName="Assets/Scripts/Service/ResSvc.cs" Line="116" Column="23" />
+      <File FileName="Assets/Scripts/UIWindow/NewBehaviourScript.cs" />
+      <File FileName="Assets/Scripts/System/MainCitySys.cs" />
+      <File FileName="Assets/Scripts/UIWindow/BattleEndWnd.cs" />
+      <File FileName="Assets/Scripts/UIWindow/TaskWnd.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,20 +17,17 @@
           <Node name="Client" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Compond" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="ResCfgs" expanded="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="Battle" expanded="True">
-                  <Node name="Controller" expanded="True" />
-                  <Node name="Entity" expanded="True" />
-                  <Node name="FSM" expanded="True" />
-                  <Node name="Manager" expanded="True" />
-                </Node>
                 <Node name="Common" expanded="True" />
                 <Node name="Net" expanded="True" />
-                <Node name="Service" expanded="True">
-                  <Node name="ResSvc.cs" selected="True" />
-                </Node>
+                <Node name="Service" expanded="True" />
                 <Node name="System" expanded="True" />
-                <Node name="UIWindow" expanded="True" />
+                <Node name="UIWindow" expanded="True">
+                  <Node name="FriendWnd.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -34,7 +37,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c869c8f0-81ed-4ef8-a898-e6764fc8c8fb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3d5d0d14-ea18-4dc8-aac0-c5f902a1e0d5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

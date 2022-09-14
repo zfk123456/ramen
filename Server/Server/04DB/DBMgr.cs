@@ -23,10 +23,16 @@ public class DBMgr
     }
     private MySqlConnection conn;
 
+    //private MySqlConnection friend;
+
+
     public void Init()
     {
         conn = new MySqlConnection("server=localhost;User Id = root;password=123456;Database=darkgod;Charset = utf8");
         conn.Open();
+
+        //friend = new MySqlConnection("server=localhost;User Id = root;password=123456;Database=friend;Charset = utf8");
+        //friend.Open();
         PECommon.Log("DBMgr Init Done.");
 
         //QueryPlayerData("xxxx", "oooo");
@@ -37,7 +43,7 @@ public class DBMgr
     {
         bool isNew = true;
         PlayerData playerData = null;
-        MySqlDataReader reader = null;
+        MySqlDataReader reader = null;//MySqlDataReader用于读取数据库中的数据 
         try
         {
             MySqlCommand cmd = new MySqlCommand("select * from account where acct = @acct", conn);
@@ -73,13 +79,11 @@ public class DBMgr
                         guideid = reader.GetInt32("guideid"),
                         time = reader.GetInt64("time"),
                         fuben = reader.GetInt32("fuben"),
-                        friend=reader.GetString("friend"),
                         //TOADD
                     };
                     #region Strong Arr
                     //数据示意：1#2#2#4#3#7#                        
                     string[] strongStrArr = reader.GetString("strong").Split('#');
-
                     int[] _strongArr = new int[6];
                     for (int i = 0; i < strongStrArr.Length; i++)
                     {
@@ -109,7 +113,7 @@ public class DBMgr
                         {
                             continue;
                         }
-                        else if (taskStrArr[i].Length >= 5)
+                        else if (taskStrArr[i].Length <= 5)
                         {
                             playerData.taskArr[i] = taskStrArr[i];
                         }
@@ -119,7 +123,30 @@ public class DBMgr
                         }
                     }
                     #endregion
+                    #region friend Arr
 
+                    //数据示意：name#name#
+                    //QueryPlayerData主要用于登陆时缓存层查询数据库数据 若存在则返回数据库中的玩家信息playerdata到缓存中去  不存在则创建新的数据  使用了Try catch finaly
+                    //读取数据时为去掉了分割符号的数据存入缓存层   在数据库中存储的数据为name#name#
+                    string[] friendStrArr = reader.GetString("friend").Split('#');//此处为读取当前分割符#之前的名字数据
+                     //split()方法有两种使用方法：1.设置分隔符；2.在进行分隔的基础上限定分隔的次数。
+                    playerData.friendArr = new string[12];
+                    for (int i = 0; i < friendStrArr.Length; i++)
+                    {
+                        if (friendStrArr[i] == "")
+                        {
+                            continue;
+                        }
+                        else if (friendStrArr[i].Length <= 5)//此处条件为分隔符#之前的名字数据的长度小于5则将数据加入 playerData.friendArr 中去
+                        {
+                            playerData.friendArr[i] = friendStrArr[i];
+                        }
+                        else
+                        {
+                            throw new Exception("DataError");
+                        }
+                    }
+                    #endregion
                     //TODO
                 }
             }
@@ -162,7 +189,7 @@ public class DBMgr
                     time = TimerSvc.Instance.GetNowTime(),
                     taskArr = new string[7],
                     fuben = 10001,
-                    friend="",
+                    friendArr = new string[12],//限制好友上限为12
                     //TOADD
                 };
 
@@ -209,8 +236,8 @@ public class DBMgr
             cmd.Parameters.AddWithValue("critical", pd.critical);
 
             cmd.Parameters.AddWithValue("guideid", pd.guideid);
-            cmd.Parameters.AddWithValue("friend", pd.friend);
-
+            cmd.Parameters.AddWithValue("time", pd.time);
+            cmd.Parameters.AddWithValue("fuben", pd.fuben);
 
 
             string strongInfo = "";
@@ -220,7 +247,6 @@ public class DBMgr
                 strongInfo += "#";
             }
             cmd.Parameters.AddWithValue("strong", strongInfo);
-            cmd.Parameters.AddWithValue("time", pd.time);
 
             //1|0|0#1|0|0#1|0|0#1|0|0#1|0|0#
             string taskInfo = "";
@@ -230,7 +256,16 @@ public class DBMgr
                 taskInfo += "#";
             }
             cmd.Parameters.AddWithValue("task", taskInfo);
-            cmd.Parameters.AddWithValue("fuben", pd.fuben);
+
+            //插入时也为用｜来进行分割
+            string friendInfo = "";
+            for (int i = 0; i < pd.friendArr.Length; i++)
+            {
+                friendInfo += pd.friendArr[i];
+                friendInfo += "#";
+            }
+            cmd.Parameters.AddWithValue("friend", friendInfo);
+
 
             //TOADD
             cmd.ExecuteNonQuery();
@@ -299,8 +334,8 @@ public class DBMgr
             cmd.Parameters.AddWithValue("critical", playerData.critical);
 
             cmd.Parameters.AddWithValue("guideid", playerData.guideid);
-            cmd.Parameters.AddWithValue("friend", playerData.friend);
-
+            cmd.Parameters.AddWithValue("time", playerData.time);
+            cmd.Parameters.AddWithValue("fuben", playerData.fuben);
 
             string strongInfo = "";
             for (int i = 0; i < playerData.strongArr.Length; i++)
@@ -309,7 +344,6 @@ public class DBMgr
                 strongInfo += "#";
             }
             cmd.Parameters.AddWithValue("strong", strongInfo);
-            cmd.Parameters.AddWithValue("time", playerData.time);
 
             string taskInfo = "";
             for (int i = 0; i < playerData.taskArr.Length; i++)
@@ -318,7 +352,16 @@ public class DBMgr
                 taskInfo += "#";
             }
             cmd.Parameters.AddWithValue("task", taskInfo);
-            cmd.Parameters.AddWithValue("fuben", playerData.fuben);
+            //好友数据更新时数据库 用#来表示分割
+            string friendInfo = "";
+            for (int i = 0; i < playerData.friendArr.Length; i++)
+            {
+                //playerData.friendArr[i];即为当前缓存层friendArr的第i个数据
+                friendInfo += playerData.friendArr[i];
+                //由于登录名字防止重复设定了重复会addtips 不重复则更新数据库存入当前名字的缓存数据 所以账号未没有好友且初次创建账号初始化时会默认生成12个分隔符#
+                friendInfo += "#";
+            }
+            cmd.Parameters.AddWithValue("friend", friendInfo);
 
             //TOADD Others
             cmd.ExecuteNonQuery();
@@ -330,4 +373,25 @@ public class DBMgr
         }
         return true;
     }
+
+    //private int InsertNewFriendData(string name)
+    //{
+    //    int id = -1;
+    //    try
+    //    {
+    //        MySqlCommand cmd = new MySqlCommand(
+    //            "insert into account set name=@name", friend);
+    //        cmd.Parameters.AddWithValue("name", name);
+
+    //        cmd.ExecuteNonQuery();//ExecuteNonQuery方法主要用来更新数据
+    //        id = (int)cmd.LastInsertedId;
+    //    }
+    //    catch(Exception e)
+    //    {
+    //        PECommon.Log("Update friend Error:" + e, LogType.Error);
+    //    }
+    //    return id;
+
+    //}
+
 }

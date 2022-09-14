@@ -227,6 +227,10 @@ public class MainCitySys : SystemRoot
     {
         friendWnd.AddFriendMsg(msg.rspFriend.frdname,msg.rspFriend.lv,msg.rspFriend.power);
     }
+    public void RspLookFriend(GameMsg msg)
+    {
+        friendWnd.OpenFriendInfo(msg.rspLookFriend.pd);
+    }
  
     #endregion
     #region Strong Wnd

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2716019667
+CRC: 4017664736
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -7,4 +7,10 @@ AssetBundleManifest:
       Dependencies: {}
     Info_1:
       Name: ui/abupdate1.ab
+      Dependencies: {}
+    Info_2:
+      Name: ui/infownd.ab
+      Dependencies: {}
+    Info_3:
+      Name: ui/fiendinfownd.ab
       Dependencies: {}

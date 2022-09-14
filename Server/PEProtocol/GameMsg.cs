@@ -30,7 +30,10 @@ namespace PEProtocol
         public RspFriend rspFriend;
         public PshFriend pshFriend;
         public SndFriend sndFriend;
-        
+        public SndRmvFriend sndRmvFriend;
+        public ReqLookFriend reqLookFriend;
+        public RspLookFriend rspLookFriend;
+
 
         public ReqBuy reqBuy;
         public RspBuy rspBuy;
@@ -92,7 +95,7 @@ namespace PEProtocol
         public long time;
         public string[] taskArr;
         public int fuben;
-        public string friend;
+        public string[] friendArr;
         //TOADD
     }
 
@@ -185,6 +188,26 @@ namespace PEProtocol
         public int lv;//返回的等级
         public int power;//返回的战斗力   
     }
+    [Serializable]
+    public class SndRmvFriend//删除好友请求
+    {
+        
+        public string frdname;
+    }
+    [Serializable]
+    public class ReqLookFriend//删除好友请求
+    {
+        //被查看的用户姓名
+        public string frdname;
+    }
+    [Serializable]
+    public class RspLookFriend//删除好友请求
+    {
+        //返回被查看的人的pd
+        public PlayerData pd;
+    }
+
+
 
 
     #endregion
@@ -337,6 +360,9 @@ namespace PEProtocol
         RspFriend = 214,
         PshFriend=215,
         SndFriend=216,
+        SndRmvFriend=217,
+        ReqLookFriend=218,
+        RspLookFriend=219,
 
         //副本为全新模块从3开始
         ReqFBFight = 301,

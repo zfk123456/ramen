@@ -433,3 +433,7 @@
 /Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Client/obj/Debug/Assembly-CSharp.csproj.CopyComplete
 /Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Client/obj/Debug/Assembly-CSharp.dll
 /Users/apple/Downloads/ResDarkGod/DarkGod_第15章/Client/obj/Debug/Assembly-CSharp.pdb
+/Users/apple/Downloads/ResDarkGod/DarkGod/Client/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
+/Users/apple/Downloads/ResDarkGod/DarkGod/Client/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/apple/Downloads/ResDarkGod/DarkGod/Client/obj/Debug/Assembly-CSharp.dll
+/Users/apple/Downloads/ResDarkGod/DarkGod/Client/obj/Debug/Assembly-CSharp.pdb

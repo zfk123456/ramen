@@ -1,28 +1,15 @@
 ﻿<Properties StartupConfiguration="{E2612B73-FF68-46CB-86D5-13FF52C96AD8}|Default">
   <MonoDevelop.Ide.ItemProperties.Server PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Server/04DB/DBMgr.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Server/02System/09FriendSys/FriendSys.cs">
     <Files>
-      <File FileName="Server/02System/04ChatSys/ChatSys.cs" Line="2" Column="15" />
-      <File FileName="Server/03Cache/CacheSvc.cs" />
-      <File FileName="Server/01Service/01NetSvc/NetSvc.cs" />
-      <File FileName="Server/04DB/DBMgr.cs" Line="2" Column="13" />
-      <File FileName="Server/01Service/02CfgSvc/CfgSvc.cs" />
+      <File FileName="Server/03Cache/CacheSvc.cs" Line="33" Column="5" />
       <File FileName="PEProtocol/GameMsg.cs" />
       <File FileName="Server/02System/03StrongSys/StrongSys.cs" />
-      <File FileName="Server/02System/09FriendSys/FriendSys.cs" />
-      <File FileName="Server/02System/07TaskSys/TaskSys.cs" />
-      <File FileName="PEProtocol/Properties/AssemblyInfo.cs" />
-      <File FileName="PEProtocol/PECommon.cs" />
-      <File FileName="Server/00Common/ServerRoot.cs" />
-      <File FileName="Server/00Common/ServerStart.cs" />
-      <File FileName="Server/01Service/01NetSvc/ServerSession.cs" />
-      <File FileName="Server/01Service/03TimerSvc/PETimer.cs" />
-      <File FileName="Server/01Service/03TimerSvc/TimerSvc.cs" />
-      <File FileName="Server/02System/01LoginSys/LoginSys.cs" />
-      <File FileName="Server/02System/02GuideSys/GuideSys.cs" />
-      <File FileName="Server/02System/05BuySys/BuySys.cs" />
+      <File FileName="Server/04DB/DBMgr.cs" />
+      <File FileName="Server/02System/09FriendSys/FriendSys.cs" Line="215" Column="50" />
+      <File FileName="Server/01Service/01NetSvc/NetSvc.cs" />
       <File FileName="Server/02System/06PowerSys/PowerSys.cs" />
-      <File FileName="Server/02System/08FubenSys/FubenSys.cs" />
+      <File FileName="Server/02System/01LoginSys/LoginSys.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -49,12 +36,12 @@
                 <Node name="06PowerSys" expanded="True" />
                 <Node name="07TaskSys" expanded="True" />
                 <Node name="08FubenSys" expanded="True" />
-                <Node name="09FriendSys" expanded="True" />
+                <Node name="09FriendSys" expanded="True">
+                  <Node name="FriendSys.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="03Cache" expanded="True" />
-              <Node name="04DB" expanded="True">
-                <Node name="DBMgr.cs" selected="True" />
-              </Node>
+              <Node name="04DB" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
           </Node>

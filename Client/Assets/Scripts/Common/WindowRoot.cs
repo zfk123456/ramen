@@ -87,7 +87,7 @@ public class WindowRoot : MonoBehaviour {
         }
         return t;
     }
-
+    //1.transform.Find用于查找子节点，它并不会递归的查找物体，也就是说它只会查找它的子节点，并不会查找子节点的子节点。
     protected Transform GetTrans(Transform trans, string name) {
         if (trans != null) {
             return trans.Find(name);

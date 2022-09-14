@@ -32,7 +32,7 @@ public class ActivityWnd : WindowRoot
     public void RefreshUI()
     {
         SetActive(hd2, false);
-        trdLst.Clear();
+        trdLst.Clear();//删除字典中所有元素 重新拉取  
 
         List<TaskRewardData> todoLst = new List<TaskRewardData>();
         List<TaskRewardData> doneLst = new List<TaskRewardData>();
@@ -141,6 +141,11 @@ public class ActivityWnd : WindowRoot
         go1.transform.SetParent(scrollTrans1);//设置父亲节点
         go1.transform.localPosition = Vector3.zero;
         go1.transform.localScale = Vector3.one;
+        //transform.Find用于查找子节点，它并不会递归的查找物体，也就是说它只会查找它的子节点，并不会查找子节点的子节点。
+        //GameObject只能查找到active的物体。如果name指定路径，则按路径查找；否则递归查找，直到查找到第一个符合条件的GameObject或者返回null
+        //如果需要热更更新内容  只需要修改这一句(无需面板赋值)设置对应颜色字体即可
+        Text txt = go1.transform.Find("Text").GetComponent<Text>();//以后减少面板拖拽ui组件的方式尽量使用这种！！
+        txt.text = "zfk好帅";
     
 
     }

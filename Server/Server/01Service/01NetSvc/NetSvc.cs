@@ -102,6 +102,12 @@ public class NetSvc
             case CMD.SndFriend://第二次请求由回应者发起
                 FriendSys.Instance.ReqFriendTarget(pack);
                 break;
+            case CMD.SndRmvFriend:
+                FriendSys.Instance.SndRmvFriend(pack);//删除好友请求  转接到好友系统的SndRmvFriend函数处理
+                break;
+            case CMD.ReqLookFriend:
+                FriendSys.Instance.ReqLookFriend(pack);
+                break;
         }
     }
 }

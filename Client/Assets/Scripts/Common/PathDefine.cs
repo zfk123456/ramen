@@ -44,6 +44,8 @@ public class PathDefine {
     #region TaskReward
     public const string TaskItemPrefab = "PrefabUI/ItemTask";
     public const string abItemPrefab = "PrefabUI/abUpdate";
+    public const string ItemFriend = "PrefabUI/ItemFriend";
+
 
     #endregion
 

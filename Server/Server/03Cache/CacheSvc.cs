@@ -30,7 +30,7 @@ public class CacheSvc
         dbMgr = DBMgr.Instance;
         PECommon.Log("CacheSvc Init Done.");
     }
-
+    
     public bool IsAcctOnLine(string acct)
     {
         return onLineAcctDic.ContainsKey(acct);
@@ -69,7 +69,7 @@ public class CacheSvc
     }
 
 
-
+    //通过对应session获取玩家数据(注意获取的为缓存层数据 无法改写只能用于与客户端的pd数据进行比较或者用于获取一些无法改写的基本信息)
     public PlayerData GetPlayerDataBySession(ServerSession session)
     {
         if (onLineSessionDic.TryGetValue(session, out PlayerData playerData))
@@ -101,12 +101,11 @@ public class CacheSvc
         }
         return session;
     }
-
+    //将缓存层数据更新进数据库中
     public bool UpdatePlayerData(int id, PlayerData playerData)
     {
         return dbMgr.UpdatePlayerData(id, playerData);
     }
-
     public void AcctOffLine(ServerSession session)
     {
         foreach (var item in onLineAcctDic)

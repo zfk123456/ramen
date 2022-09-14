@@ -147,12 +147,16 @@ public class NetSvc : MonoBehaviour {
             case CMD.RspFBFightEnd:
                 BattleSys.Instance.RspFightEnd(msg);
                 break;
-            case CMD.RspFriend:
+            case CMD.RspFriend:// 第二次回应发送给对应客户端
                 MainCitySys.Instance.RspFriend(msg);
                 break;
             case CMD.PshFriend://第一次回应发送给对应客户端
                 MainCitySys.Instance.PshFriend(msg);
                 break;
+            case CMD.RspLookFriend:
+                MainCitySys.Instance.RspLookFriend(msg);
+                break;
+             
 
         }
     }

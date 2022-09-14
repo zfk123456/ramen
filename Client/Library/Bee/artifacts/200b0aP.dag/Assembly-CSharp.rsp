@@ -342,6 +342,7 @@
 "Assets/Scripts/UIWindow/CreateWnd.cs"
 "Assets/Scripts/UIWindow/DynamicWnd.cs"
 "Assets/Scripts/UIWindow/FriendAccWnd.cs"
+"Assets/Scripts/UIWindow/FriendInfoWnd.cs"
 "Assets/Scripts/UIWindow/FriendWnd.cs"
 "Assets/Scripts/UIWindow/FubenWnd.cs"
 "Assets/Scripts/UIWindow/GuideWnd.cs"
